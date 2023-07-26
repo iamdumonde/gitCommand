@@ -1,0 +1,116 @@
+Bien sûr ! Vous avez déjà cloné le dossier du GitHub de votre formateur sur votre ordinateur local. Maintenant, vous souhaitez apporter des modifications à ce dossier cloné et ensuite le mettre sur votre propre GitHub. Voici comment procéder :
+
+Étape 1: Apporter des modifications au dossier cloné
+1. Ouvrez le terminal ou Git Bash sur votre ordinateur.
+2. Naviguez jusqu'au répertoire du dossier cloné en utilisant la commande "cd" pour changer de répertoire.
+   Par exemple :
+   ```
+   cd chemin/vers/votre/dossier/clone
+   ```
+3. Effectuez les modifications souhaitées dans les fichiers du dossier cloné en utilisant un éditeur de texte ou tout autre outil de développement.
+
+Étape 2: Enregistrer les modifications sur votre GitHub
+1. Tout d'abord, assurez-vous d'avoir un compte GitHub et que vous êtes connecté à ce compte.
+2. Sur GitHub, créez un nouveau référentiel vide en vous rendant sur la page principale de votre profil GitHub et en cliquant sur le bouton "New" (Nouveau).
+3. Donnez un nom à votre nouveau référentiel et assurez-vous de ne pas cocher l'option "Initialize this repository with a README" (Initialiser ce référentiel avec un fichier README) car vous avez déjà des fichiers provenant du dossier cloné.
+4. Cliquez sur le bouton "Create repository" (Créer un référentiel) pour créer le référentiel.
+
+Étape 3: Pousser les modifications vers votre GitHub
+1. De retour dans le terminal ou Git Bash, ajoutez le lien de votre référentiel GitHub comme nouvelle origine à votre dossier cloné à l'aide de la commande suivante :
+   ```
+   git remote set-url origin https://github.com/VOTRE-NOM-D'UTILISATEUR/VOTRE-REFERENCEL
+   ```
+   Assurez-vous de remplacer "VOTRE-NOM-D'UTILISATEUR" par votre nom d'utilisateur GitHub et "VOTRE-REFERENCEL" par le nom du référentiel que vous venez de créer.
+
+2. Maintenant, vous pouvez pousser les modifications vers votre référentiel GitHub en utilisant la commande suivante :
+   ```
+   git push origin NOM-DE-VOTRE-BRANCHE
+   ```
+   Remplacez "NOM-DE-VOTRE-BRANCHE" par le nom de la branche sur laquelle vous avez effectué vos modifications. Généralement, la branche par défaut est "main" ou "master".
+
+Et voilà ! Vous avez maintenant apporté des modifications à votre dossier cloné et les avez poussées vers votre propre référentiel GitHub. Vos modifications sont maintenant visibles sur votre GitHub personnel.
+
+Assurez-vous de garder votre dossier cloné à jour en fusionnant les éventuels changements du référentiel original de votre formateur dans votre propre référentiel GitHub à l'aide des commandes "git fetch" et "git merge" ou "git pull".
+
+N'hésitez pas à me demander si vous avez besoin d'aide supplémentaire ou si vous avez d'autres questions ! Bonne continuation dans votre projet sur GitHub !
+
+
+
+Pas de problème ! Je suis là pour vous aider. Pour travailler sur votre projet sans affecter directement la branche principale (généralement appelée "master" ou "main"), vous pouvez créer une nouvelle branche à partir de la branche principale pour effectuer vos modifications. Ensuite, une fois que vous êtes satisfait de vos modifications et que vous voulez les mettre sur votre GitHub, vous pouvez fusionner la branche avec la branche principale. Voici comment procéder :
+
+Étape 1: Créer une nouvelle branche pour vos modifications
+1. Assurez-vous d'être sur la branche principale (master ou main) en utilisant la commande suivante :
+   ```
+   git checkout master
+   ```
+   Remplacez "master" par le nom de votre branche principale si elle est différente.
+
+2. Créez une nouvelle branche à partir de la branche principale en utilisant la commande suivante :
+   ```
+   git checkout -b nom-de-ma-branche
+   ```
+   Remplacez "nom-de-ma-branche" par un nom descriptif pour votre nouvelle branche.
+
+3. Vous êtes maintenant sur votre nouvelle branche, prêt à effectuer vos modifications en toute sécurité sans affecter la branche principale.
+
+Étape 2: Effectuer vos modifications
+1. Travaillez sur votre projet et apportez les modifications souhaitées dans les fichiers de votre projet.
+
+2. Effectuez des commits pour enregistrer vos modifications dans la nouvelle branche en utilisant la commande :
+   ```
+   git add nom-du-fichier-modifié
+   git commit -m "Description de la modification"
+   ```
+   Répétez ces étapes pour chaque fichier modifié.
+
+Étape 3: Mettre à jour votre référentiel GitHub
+1. Une fois que vous êtes satisfait de vos modifications sur la nouvelle branche et que vous voulez les mettre sur votre GitHub, retournez sur la branche principale (master ou main) en utilisant la commande :
+   ```
+   git checkout master
+   ```
+   Encore une fois, remplacez "master" par le nom de votre branche principale si nécessaire.
+
+2. Fusionnez votre nouvelle branche avec la branche principale en utilisant la commande :
+   ```
+   git merge nom-de-ma-branche
+   ```
+   Cela appliquera les modifications de votre nouvelle branche à la branche principale.
+
+3. Enfin, poussez les modifications vers votre référentiel GitHub en utilisant la commande :
+   ```
+   git push origin master
+   ```
+   Cela mettra à jour la branche principale de votre référentiel GitHub avec vos modifications.
+
+Vous avez maintenant travaillé sur une branche séparée pour vos modifications et les avez fusionnées avec la branche principale de votre référentiel GitHub. Votre projet est à jour et vos modifications sont sauvegardées sur GitHub.
+
+N'oubliez pas de créer de nouvelles branches pour chaque nouvelle fonctionnalité ou modification importante que vous voulez apporter à votre projet. Cela vous permettra de travailler en toute sécurité et de garder votre historique de commits clair et organisé.
+
+Si vous avez besoin de plus d'aide ou d'explications supplémentaires, n'hésitez pas à me le demander ! Bon travail sur votre projet !
+
+
+
+Pour retourner sur la nouvelle branche que vous avez créée, vous pouvez utiliser la commande `git checkout` avec le nom de votre branche. Voici comment procéder :
+
+1. Assurez-vous d'être dans le répertoire de votre projet en utilisant la commande `cd` pour vous déplacer vers le répertoire approprié.
+
+2. Pour voir la liste des branches disponibles dans votre référentiel, vous pouvez utiliser la commande `git branch`.
+
+3. Identifiez le nom de la nouvelle branche que vous avez créée précédemment dans la liste affichée.
+
+4. Utilisez la commande `git checkout` suivi du nom de votre branche pour y retourner. Par exemple, si votre nouvelle branche s'appelle "ma-nouvelle-branche", la commande serait :
+   ```
+   git checkout ma-nouvelle-branche
+   ```
+
+5. Vous êtes maintenant de retour sur votre nouvelle branche, prêt à continuer à travailler sur vos modifications.
+
+N'oubliez pas que vous pouvez utiliser la commande `git status` pour vérifier l'état actuel de votre branche et voir les modifications qui ont été effectuées.
+
+Si vous souhaitez revenir à la branche principale (généralement appelée "master" ou "main"), vous pouvez utiliser la commande `git checkout master` (ou `git checkout main` si vous utilisez la nouvelle dénomination) à la place.
+
+Avec ces commandes, vous pouvez facilement naviguer entre différentes branches de votre référentiel Git et travailler sur vos modifications en toute sécurité sans affecter la branche principale jusqu'à ce que vous soyez prêt à fusionner vos changements.
+
+Si vous avez besoin de plus d'aide ou de clarification supplémentaire, n'hésitez pas à demander ! Bon travail sur votre projet !
+
+ggh
